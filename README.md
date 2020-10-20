@@ -95,3 +95,5 @@ You are required to submit BOTH of the following for review:
 
 - - -
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+Deployed site:   https://smanter82.github.io/WorkDayScheduler/
