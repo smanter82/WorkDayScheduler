@@ -1,5 +1,5 @@
 //Still need to finish for items #5-9, connect with Moment for times, color-code time blocks to indicate whether it is in the past, present, or future, 
-//and figure out how to get new data to replace old data 
+//and figure out how to get new data to replace old data, and update ReadMe file
 
 //set variables for button, input, and label (#1-4 so far)
 let saveBtn1 = document.querySelector("#saveBtn1")
