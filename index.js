@@ -5,6 +5,7 @@
 let currentDay = document.getElementById("currentDay")
 let m = moment().format('dddd, MMMM Do YYYY h:mm:ss a')
 currentDay.textContent = m
+//javaScript get time
 
 
 //set variables for button, input, and label 
@@ -37,7 +38,12 @@ let $item9 = $("#scheduleItem9")
 let $item9activity = $("#scheduleItem9Label")
 
 //Create local storage for schedule items
-let $schedule1 = JSON.parse(localStorage.getItem("$schedule1")) || [];
+
+
+// let $schedule1 = JSON.parse(localStorage.getItem("$schedule1")) || [];
+// if ($schedule1 !== null) {
+//     $item1.html(`<div id="scheduleItem1">${$schedule1}</div>`)
+// }
 let $schedule2 = JSON.parse(localStorage.getItem("$schedule2")) || [];
 let $schedule3 = JSON.parse(localStorage.getItem("$schedule3")) || [];
 let $schedule4 = JSON.parse(localStorage.getItem("$schedule4")) || [];
@@ -62,14 +68,28 @@ $item9activity.text($schedule9)
 //Set Save button event listeners for each activity $item
 //If text is null, do this:  If not, remove item from storage
 $saveBtn1.click(function(event){
-    event.preventDefault()
-    let $savedStuff1 = $item1.val()
-    console.log($savedStuff1)
-    $item1activity.text($savedStuff1)
-    $schedule1.push($savedStuff1)
-    console.log($schedule1)
-    localStorage.setItem("$schedule1", JSON.stringify($savedStuff1))
-    
+    if ($item1activity.text() === null) {
+        event.preventDefault()
+        let $savedStuff1 = $item1.val()
+        console.log($savedStuff1)
+        $item1activity.text($savedStuff1)  //add div, p, whatever instead of .text, inner html
+        $schedule1.push($savedStuff1)
+        console.log($schedule1)
+        localStorage.setItem("$schedule1", JSON.stringify($savedStuff1))
+    } else {
+        event.preventDefault()
+        $item1activity.text("")        
+        localStorage.removeItem("$schedule1")
+                                                 //need to finish getting the new value to pop up if user changes schedule.  Also change label to div or p tag.
+        
+        let $savedStuff1 = $item1.val()
+        console.log($savedStuff1)
+        $item1activity.text($savedStuff1)
+        $schedule1.push($savedStuff1)
+        console.log($schedule1)
+        localStorage.setItem("$schedule1", JSON.stringify($savedStuff1))
+
+    }
 })
 $saveBtn2.click(function(event){
     event.preventDefault()
