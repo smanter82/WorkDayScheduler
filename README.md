@@ -14,8 +14,11 @@
 ## Reflections
 
 I learned:
-1)
-2)
-3)
+1)  How to populate and repopulate the scheduler using input data and local storage.
+2)  How to connect my site to the moment.js library.
+3)  
+
+Some code done in collaboration with 5 PM study group:
+https://github.com/shannonquinn91/Coding-Quiz, https://github.com/dmaysteinman/Code_Quiz, https://github.com/mdjonestwo, Brenda Burns, https://github.com/Ewager1, Jesal Mehta
 
 Deployed site:   https://smanter82.github.io/WorkDayScheduler/
