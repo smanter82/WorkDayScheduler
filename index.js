@@ -59,7 +59,7 @@ $item7activity.text($schedule7)
 $item8activity.text($schedule8)
 $item9activity.text($schedule9)
 
-//Set Save button event listeners for each activity $item
+//Set Save button event listeners for each activity $item                       //Why are the save buttons changing text now??
 $saveBtn1.click(function(event){
         event.preventDefault()
         $("#scheduleItem1Label").empty();
@@ -67,8 +67,8 @@ $saveBtn1.click(function(event){
         let $savedStuff1 = $item1.val()
         //foreach
           var a = $("button");
-          a.attr("data-name", $savedStuff1);
-          a.text($savedStuff1);
+          $("#scheduleItem1Label").attr("data-name", $savedStuff1);
+          $("#scheduleItem1").text($savedStuff1);
           $("#scheduleItemLabel1").append(a);
         console.log($savedStuff1)
         
@@ -83,8 +83,8 @@ $saveBtn2.click(function(event){
         let $savedStuff2 = $item2.val()
         //foreach
           var a = $("button");
-          a.attr("data-name", $savedStuff2);
-          a.text($savedStuff2);
+          $("#scheduleItem2Label").attr("data-name", $savedStuff2);
+          $("#scheduleItem2").text($savedStuff2);
           $("#scheduleItemLabel2").append(a);
         console.log($savedStuff2)
         
@@ -98,8 +98,8 @@ $saveBtn3.click(function(event){
         let $savedStuff3 = $item3.val()
         //foreach
           var a = $("button");
-          a.attr("data-name", $savedStuff3);
-          a.text($savedStuff3);
+          $("#scheduleItem3Label").attr("data-name", $savedStuff3);
+          $("#scheduleItem3").text($savedStuff3);
           $("#scheduleItemLabel3").append(a);
         console.log($savedStuff3)
         
@@ -113,8 +113,8 @@ $saveBtn4.click(function(event){
         let $savedStuff4 = $item4.val()
         //foreach
           var a = $("button");
-          a.attr("data-name", $savedStuff4);
-          a.text($savedStuff4);
+          $("#scheduleItem4Label").attr("data-name", $savedStuff4);
+          $("#scheduleItem4").text($savedStuff4);
           $("#scheduleItemLabel4").append(a);
         console.log($savedStuff4)
         
@@ -128,8 +128,8 @@ $saveBtn5.click(function(event){
         let $savedStuff5 = $item5.val()
         //foreach
           var a = $("button");
-          a.attr("data-name", $savedStuff5);
-          a.text($savedStuff5);
+          $("#scheduleItem5Label").attr("data-name", $savedStuff5);
+          $("#scheduleItem5").text($savedStuff5);
           $("#scheduleItemLabel5").append(a);
         console.log($savedStuff5)
         
@@ -143,8 +143,8 @@ $saveBtn6.click(function(event){
         let $savedStuff6 = $item6.val()
         //foreach
           var a = $("button");
-          a.attr("data-name", $savedStuff6);
-          a.text($savedStuff6);
+          $("#scheduleItem6Label").attr("data-name", $savedStuff6);
+          $("#scheduleItem6").text($savedStuff6);
           $("#scheduleItemLabel6").append(a);
         console.log($savedStuff6)
         
@@ -158,8 +158,8 @@ $saveBtn7.click(function(event){
         let $savedStuff7 = $item7.val()
         //foreach
           var a = $("button");
-          a.attr("data-name", $savedStuff7);
-          a.text($savedStuff7);
+          $("#scheduleItem7Label").attr("data-name", $savedStuff7);
+          $("#scheduleItem7").text($savedStuff7);
           $("#scheduleItemLabel7").append(a);
         console.log($savedStuff7)
         
@@ -173,8 +173,8 @@ $saveBtn8.click(function(event){
         let $savedStuff8 = $item8.val()
         //foreach
           var a = $("button");
-          a.attr("data-name", $savedStuff8);
-          a.text($savedStuff8);
+          $("#scheduleItem8Label").attr("data-name", $savedStuff8);
+          $("#scheduleItem8").text($savedStuff8);
           $("#scheduleItemLabel8").append(a);
         console.log($savedStuff8)
         
@@ -188,8 +188,8 @@ $saveBtn9.click(function(event){
         let $savedStuff9 = $item9.val()
         //foreach
           var a = $("button");
-          a.attr("data-name", $savedStuff9);
-          a.text($savedStuff9);
+          $("#scheduleItem9Label").attr("data-name", $savedStuff9);
+          $("#scheduleItem9").text($savedStuff9);
           $("#scheduleItemLabel9").append(a);
         console.log($savedStuff9)
         
