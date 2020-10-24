@@ -1,5 +1,4 @@
-//connect with Moment for times, color-code time blocks to indicate whether it is in the past, present, or future, 
-//and figure out how to get new data to replace old data, and update ReadMe file
+//connect with Moment for times, color-code time blocks to indicate whether it is in the past, present, or future, and update ReadMe file
 
 //Set current date and time in header
 let currentDay = document.getElementById("currentDay")
@@ -38,23 +37,18 @@ let $item9 = $("#scheduleItem9")
 let $item9activity = $("#scheduleItem9Label")
 
 //Create local storage for schedule items
+let $schedule1 = JSON.parse(localStorage.getItem("$storedStuff1"))
+let $schedule2 = JSON.parse(localStorage.getItem("$storedStuff2")) 
+let $schedule3 = JSON.parse(localStorage.getItem("$storedStuff3"))
+let $schedule4 = JSON.parse(localStorage.getItem("$storedStuff4"))
+let $schedule5 = JSON.parse(localStorage.getItem("$storedStuff5"))
+let $schedule6 = JSON.parse(localStorage.getItem("$storedStuff6"))
+let $schedule7 = JSON.parse(localStorage.getItem("$storedStuff7"))
+let $schedule8 = JSON.parse(localStorage.getItem("$storedStuff8"))
+let $schedule9 = JSON.parse(localStorage.getItem("$storedStuff9"))
 
 
-// let $schedule1 = JSON.parse(localStorage.getItem("$schedule1")) || [];
-// if ($schedule1 !== null) {
-//     $item1.html(`<div id="scheduleItem1">${$schedule1}</div>`)
-// }
-let $schedule2 = JSON.parse(localStorage.getItem("$schedule2")) || [];
-let $schedule3 = JSON.parse(localStorage.getItem("$schedule3")) || [];
-let $schedule4 = JSON.parse(localStorage.getItem("$schedule4")) || [];
-let $schedule5 = JSON.parse(localStorage.getItem("$schedule5")) || [];
-let $schedule6 = JSON.parse(localStorage.getItem("$schedule6")) || [];
-let $schedule7 = JSON.parse(localStorage.getItem("$schedule7")) || [];
-let $schedule8 = JSON.parse(localStorage.getItem("$schedule8")) || [];
-let $schedule9 = JSON.parse(localStorage.getItem("$schedule9")) || [];
-
-
-//Pull items from local storage on loading    --  How do I get any new data to replace the old data now???
+//Pull items from local storage on loading
 $item1activity.text($schedule1)
 $item2activity.text($schedule2)   
 $item3activity.text($schedule3) 
@@ -66,109 +60,140 @@ $item8activity.text($schedule8)
 $item9activity.text($schedule9)
 
 //Set Save button event listeners for each activity $item
-//If text is null, do this:  If not, remove item from storage
 $saveBtn1.click(function(event){
-    if ($item1activity.text() === null) {
         event.preventDefault()
+        $("#scheduleItem1Label").empty();
+        // let activity = $(this).attr('data-name')
         let $savedStuff1 = $item1.val()
+        //foreach
+          var a = $("button");
+          a.attr("data-name", $savedStuff1);
+          a.text($savedStuff1);
+          $("#scheduleItemLabel1").append(a);
         console.log($savedStuff1)
-        $item1activity.text($savedStuff1)  //add div, p, whatever instead of .text, inner html
-        $schedule1.push($savedStuff1)
-        console.log($schedule1)
-        localStorage.setItem("$schedule1", JSON.stringify($savedStuff1))
-    } else {
-        event.preventDefault()
-        $item1activity.text("")        
-        localStorage.removeItem("$schedule1")
-                                                 //need to finish getting the new value to pop up if user changes schedule.  Also change label to div or p tag.
         
-        let $savedStuff1 = $item1.val()
-        console.log($savedStuff1)
-        $item1activity.text($savedStuff1)
-        $schedule1.push($savedStuff1)
-        console.log($schedule1)
-        localStorage.setItem("$schedule1", JSON.stringify($savedStuff1))
+        localStorage.setItem("$storedStuff1", JSON.stringify($savedStuff1))
 
-    }
 })
+   
 $saveBtn2.click(function(event){
     event.preventDefault()
-    let $savedStuff2 = $item2.val()
-    console.log($savedStuff2)
-    $item2activity.text($savedStuff2)
-    $schedule2.push($savedStuff2)
-    console.log($schedule2)
-    localStorage.setItem("$schedule2", JSON.stringify($savedStuff2))
+    $("#scheduleItem2Label").empty();
+        // let activity = $(this).attr('data-name')
+        let $savedStuff2 = $item2.val()
+        //foreach
+          var a = $("button");
+          a.attr("data-name", $savedStuff2);
+          a.text($savedStuff2);
+          $("#scheduleItemLabel2").append(a);
+        console.log($savedStuff2)
+        
+        localStorage.setItem("$storedStuff2", JSON.stringify($savedStuff2))
     
 })
 $saveBtn3.click(function(event){
     event.preventDefault()
-    let $savedStuff3 = $item3.val()
-    console.log($savedStuff3)
-    $item3activity.text($savedStuff3)
-    $schedule3.push($savedStuff3)
-    console.log($schedule3)
-    localStorage.setItem("$schedule3", JSON.stringify($savedStuff3))
+    $("#scheduleItem3Label").empty();
+        // let activity = $(this).attr('data-name')
+        let $savedStuff3 = $item3.val()
+        //foreach
+          var a = $("button");
+          a.attr("data-name", $savedStuff3);
+          a.text($savedStuff3);
+          $("#scheduleItemLabel3").append(a);
+        console.log($savedStuff3)
+        
+        localStorage.setItem("$storedStuff3", JSON.stringify($savedStuff3))
     
 })
 $saveBtn4.click(function(event){
     event.preventDefault()
-    let $savedStuff4 = $item4.val()
-    console.log($savedStuff4)
-    $item4activity.text($savedStuff4)
-    $schedule4.push($savedStuff4)
-    console.log($schedule4)
-    localStorage.setItem("$schedule4", JSON.stringify($savedStuff4))
+    $("#scheduleItem4Label").empty();
+        // let activity = $(this).attr('data-name')
+        let $savedStuff4 = $item4.val()
+        //foreach
+          var a = $("button");
+          a.attr("data-name", $savedStuff4);
+          a.text($savedStuff4);
+          $("#scheduleItemLabel4").append(a);
+        console.log($savedStuff4)
+        
+        localStorage.setItem("$storedStuff4", JSON.stringify($savedStuff4))
     
 })
 $saveBtn5.click(function(event){
     event.preventDefault()
-    let $savedStuff5 = $item5.val()
-    console.log($savedStuff5)
-    $item5activity.text($savedStuff5)
-    $schedule5.push($savedStuff5)
-    console.log($schedule5)
-    localStorage.setItem("$schedule5", JSON.stringify($savedStuff5))
+    $("#scheduleItem5Label").empty();
+        // let activity = $(this).attr('data-name')
+        let $savedStuff5 = $item5.val()
+        //foreach
+          var a = $("button");
+          a.attr("data-name", $savedStuff5);
+          a.text($savedStuff5);
+          $("#scheduleItemLabel5").append(a);
+        console.log($savedStuff5)
+        
+        localStorage.setItem("$storedStuff5", JSON.stringify($savedStuff5))
     
 })
 $saveBtn6.click(function(event){
     event.preventDefault()
-    let $savedStuff6 = $item6.val()
-    console.log($savedStuff6)
-    $item6activity.text($savedStuff6)
-    $schedule6.push($savedStuff6)
-    console.log($schedule6)
-    localStorage.setItem("$schedule6", JSON.stringify($savedStuff6))
+    $("#scheduleItem6Label").empty();
+        // let activity = $(this).attr('data-name')
+        let $savedStuff6 = $item6.val()
+        //foreach
+          var a = $("button");
+          a.attr("data-name", $savedStuff6);
+          a.text($savedStuff6);
+          $("#scheduleItemLabel6").append(a);
+        console.log($savedStuff6)
+        
+        localStorage.setItem("$storedStuff6", JSON.stringify($savedStuff6))
     
 })
 $saveBtn7.click(function(event){
     event.preventDefault()
-    let $savedStuff7 = $item7.val()
-    console.log($savedStuff7)
-    $item7activity.text($savedStuff7)
-    $schedule7.push($savedStuff7)
-    console.log($schedule7)
-    localStorage.setItem("$schedule7", JSON.stringify($savedStuff7))
+    $("#scheduleItem7Label").empty();
+        // let activity = $(this).attr('data-name')
+        let $savedStuff7 = $item7.val()
+        //foreach
+          var a = $("button");
+          a.attr("data-name", $savedStuff7);
+          a.text($savedStuff7);
+          $("#scheduleItemLabel7").append(a);
+        console.log($savedStuff7)
+        
+        localStorage.setItem("$storedStuff7", JSON.stringify($savedStuff7))
     
 })
 $saveBtn8.click(function(event){
     event.preventDefault()
-    let $savedStuff8 = $item8.val()
-    console.log($savedStuff8)
-    $item8activity.text($savedStuff8)
-    $schedule8.push($savedStuff8)
-    console.log($schedule8)
-    localStorage.setItem("$schedule8", JSON.stringify($savedStuff8))
+    $("#scheduleItem8Label").empty();
+        // let activity = $(this).attr('data-name')
+        let $savedStuff8 = $item8.val()
+        //foreach
+          var a = $("button");
+          a.attr("data-name", $savedStuff8);
+          a.text($savedStuff8);
+          $("#scheduleItemLabel8").append(a);
+        console.log($savedStuff8)
+        
+        localStorage.setItem("$storedStuff8", JSON.stringify($savedStuff8))
     
 })
 $saveBtn9.click(function(event){
     event.preventDefault()
-    let $savedStuff9 = $item9.val()
-    console.log($savedStuff9)
-    $item9activity.text($savedStuff9)
-    $schedule9.push($savedStuff9)
-    console.log($schedule9)
-    localStorage.setItem("$schedule9", JSON.stringify($savedStuff9))
+    $("#scheduleItem9Label").empty();
+        // let activity = $(this).attr('data-name')
+        let $savedStuff9 = $item9.val()
+        //foreach
+          var a = $("button");
+          a.attr("data-name", $savedStuff9);
+          a.text($savedStuff9);
+          $("#scheduleItemLabel9").append(a);
+        console.log($savedStuff9)
+        
+        localStorage.setItem("$storedStuff9", JSON.stringify($savedStuff9))
     
 })
 
