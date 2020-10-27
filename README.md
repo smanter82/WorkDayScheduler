@@ -23,4 +23,8 @@ I learned:
 Some code done in collaboration with 5 PM study group:
 https://github.com/shannonquinn91/, https://github.com/dmaysteinman/, https://github.com/mdjonestwo, Brenda Burns, https://github.com/Ewager1, Jesal Mehta, https://github.com/EddiePhi
 
+## Screenshot
+
+![Screenshot of Website](./Screenshot_of_scheduler.png)
+
 Deployed site:   https://smanter82.github.io/WorkDayScheduler/
