@@ -1,4 +1,4 @@
-//connect with Moment for times, color-code time blocks to indicate whether it is in the past, present, or future, and update ReadMe file
+//Still need to condense code.  Too much repetition.
 
 //Set current date and time in header
 let currentDay = document.getElementById("currentDay")
@@ -81,7 +81,7 @@ $item7activity.text($schedule7)
 $item8activity.text($schedule8)
 $item9activity.text($schedule9)
 
-//Set Save button event listeners for each activity $item                       //Why are the save buttons changing text now??
+//Set Save button event listeners for each activity item
 $saveBtn1.click(function(event){
         event.preventDefault()
         $("#scheduleItem1Label").empty();
