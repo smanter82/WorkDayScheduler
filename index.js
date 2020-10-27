@@ -5,19 +5,29 @@ let currentDay = document.getElementById("currentDay")
 let m = moment().format('dddd, MMMM Do YYYY h:mm:ss a')
 currentDay.textContent = m
 //javaScript get time
-let currentTime = parseInt(moment().format('H'))
-console.log(currentTime)
+let currentTime = (moment().format('H'))
 
-// function activityBackground(element){
-//     const timeVal = parseInt(element.attr('#times1'))
-//     if (timeVal < currentTime) {
-//         element.css('backgroundColor', 'red')
-//     } else if (timeVal > currentTime) {
-//         element.css('backgroundColor', 'lightBlue')
-//     } else {
-//         element.css('backGroundColor', 'green')
-//     }
-// }
+//Set time-based color change
+function activityBackground(event){
+    
+    let timeNow = moment().format("H");
+    
+    for (i=8; i<18; i++)
+    if (i < currentTime) {
+        $(`#${i}`).removeClass("green");
+        $(`#${i}`).removeClass("red");
+        $(`#${i}`).addClass("gray");
+    } else if (i > currentTime) {
+        $(`#${i}`).removeClass("gray");
+        $(`#${i}`).addClass("red");
+        $(`#${i}`).addClass("green");
+    } else {
+        $(`#${i}`).removeClass("gray");
+        $(`#${i}`).removeClass("green");
+        $(`#${i}`).addClass("red");
+    }
+};
+setInterval(activityBackground, 1000);
 
 //set variables for button, input, and label 
 let $saveBtn1 = $("#saveBtn1")

@@ -70,10 +70,15 @@ textarea{
   transition: all .3s ease-in-out;
 }
 
-.times {
-  background-color: #dffcdf;
+/* Color Classes for time-based color coding */
+.red {
+  background-color: red;
 }
 
-.Save {
-  background-color: #84b3fa;
+.gray {
+  background-color: lightgray;
+}
+
+.green {
+  background-color: lightgreen;
 }
