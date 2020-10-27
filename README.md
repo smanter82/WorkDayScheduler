@@ -25,6 +25,6 @@ https://github.com/shannonquinn91/, https://github.com/dmaysteinman/, https://gi
 
 ## Screenshot
 
-![Screenshot of Website](./Screenshot_of_scheduler.png)
+![Screenshot of Website](./Assets/Screenshot_of_scheduler.png)
 
 Deployed site:   https://smanter82.github.io/WorkDayScheduler/
