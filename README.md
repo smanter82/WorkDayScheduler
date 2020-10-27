@@ -16,9 +16,11 @@
 I learned:
 1)  How to populate and repopulate the scheduler using input data and local storage.
 2)  How to connect my site to the moment.js library.
-3)  
+3)  How to color code based on time of day.
+4)  I'm depending too much on hard coding into HTML.
+4)  How to use JQuery instead of javaScript.
 
 Some code done in collaboration with 5 PM study group:
-https://github.com/shannonquinn91/Coding-Quiz, https://github.com/dmaysteinman/Code_Quiz, https://github.com/mdjonestwo, Brenda Burns, https://github.com/Ewager1, Jesal Mehta
+https://github.com/shannonquinn91/, https://github.com/dmaysteinman/, https://github.com/mdjonestwo, Brenda Burns, https://github.com/Ewager1, Jesal Mehta, https://github.com/EddiePhi
 
 Deployed site:   https://smanter82.github.io/WorkDayScheduler/
